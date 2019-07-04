@@ -8,7 +8,9 @@
     "watch": "webpack --watch --progress --colors --config webpack.conf.js",
     "dev": "webpack --progress --colors --config webpack.conf.js",
     "prod": "NODE_ENV=production webpack -p --config webpack.conf.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "RocketTheme, LLC",
   "license": "MIT",
@@ -32,7 +34,8 @@
     "speakingurl": "^9.0.0",
     "toastr": "^2.1.2",
     "watchjs": "0.0.0",
-    "whatwg-fetch": "^1.0.0"
+    "whatwg-fetch": "^1.0.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
@@ -53,5 +56,6 @@
     "merge-stream": "^1.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
-  }
+  },
+  "snyk": true
 }
